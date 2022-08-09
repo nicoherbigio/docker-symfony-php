@@ -1,0 +1,18 @@
+### Ignore operating system specific files and directories
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+
+### Ignore integrated development environment specific files and directories
+
+# JetBrains Products
+.idea/
+
+
+### Include .gitkeep files to preserve initial empty directory structures
+
+!**/.gitkeep

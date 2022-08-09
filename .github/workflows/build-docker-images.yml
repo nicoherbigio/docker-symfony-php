@@ -1,0 +1,71 @@
+name: Docker image CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/**'
+      - '7.4/**'
+      - '8.0/**'
+      - '8.1/**'
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  build-docker-images:
+    runs-on: [ubuntu-20.04]
+
+    strategy:
+      fail-fast: false
+      matrix:
+        version: [7.4, 8.0, 8.1]
+        include:
+          - version: 7.4
+            docker-context: 7.4/debian/apache/default
+            docker-tags: |
+              nicoherbigde/symfony-php:7.4-apache
+              nicoherbigio/symfony-php:7.4-apache
+              nicoherbigde/symfony-php:7.4.30-apache
+              nicoherbigio/symfony-php:7.4.30-apache
+          - version: 8.0
+            docker-context: 8.0/debian/apache/default
+            docker-tags: |
+              nicoherbigde/symfony-php:8.0-apache
+              nicoherbigio/symfony-php:8.0-apache
+              nicoherbigde/symfony-php:8.0.22-apache
+              nicoherbigio/symfony-php:8.0.22-apache
+          - version: 8.1
+            docker-context: 8.1/debian/apache/default
+            docker-tags: |
+              nicoherbigde/symfony-php:8.1-apache
+              nicoherbigio/symfony-php:8.1-apache
+              nicoherbigde/symfony-php:8.1.9-apache
+              nicoherbigio/symfony-php:8.1.9-apache
+
+    steps:
+      - name: Checkout Git Repository
+        uses: actions/checkout@v2
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          version: v0.6.3
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build Docker Image and Push to DockerHub
+        uses: docker/build-push-action@v2
+        with:
+          context: ${{ matrix.docker-context }}
+          no-cache: true
+          push: true
+          tags: ${{ matrix.docker-tags }}
