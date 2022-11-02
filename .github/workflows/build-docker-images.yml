@@ -65,5 +65,6 @@ jobs:
         with:
           context: ${{ matrix.docker-context }}
           no-cache: true
+          pull: true
           push: true
           tags: ${{ matrix.docker-tags }}
