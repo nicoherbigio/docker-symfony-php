@@ -18,7 +18,7 @@ The following command is required to build the current version.
 
 ```
 # Build the Docker image
-docker build --no-cache --pull --tag nicoherbigde/symfony-php:8.1 8.1/debian/apache/default/
+docker build --no-cache --pull --tag nicoherbigde/symfony-php:8.1-bullseye 8.1/debian/apache/default/
 ```
 
 > **Hint:** For building an older version, the directory and file paths as well as the Docker tags must be adjusted accordingly, analogous to the previously mentioned command.
@@ -29,7 +29,7 @@ The following command is required to upload the current version.
 
 ```
 # Upload the Docker image to Docker Hub
-docker push nicoherbigde/symfony-php:8.1
+docker push nicoherbigde/symfony-php:8.1-bullseye
 ```
 
 > **Hint:** For uploading an older version, the Docker tags must be adjusted accordingly, analogous to the previously mentioned command.

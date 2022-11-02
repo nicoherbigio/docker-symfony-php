@@ -20,23 +20,29 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        version: [7.4, 8.0, 8.1]
+        version: [7.4-bullseye, 8.0-bullseye, 8.1-bullseye]
         include:
-          - version: 7.4
+          - version: 7.4-bullseye
             docker-context: 7.4/debian/apache/default
             docker-tags: |
               nicoherbigde/symfony-php:7.4-apache
+              nicoherbigde/symfony-php:7.4-apache-bullseye
               nicoherbigde/symfony-php:7.4.32-apache
-          - version: 8.0
+              nicoherbigde/symfony-php:7.4.32-apache-bullseye
+          - version: 8.0-bullseye
             docker-context: 8.0/debian/apache/default
             docker-tags: |
               nicoherbigde/symfony-php:8.0-apache
+              nicoherbigde/symfony-php:8.0-apache-bullseye
               nicoherbigde/symfony-php:8.0.25-apache
-          - version: 8.1
+              nicoherbigde/symfony-php:8.0.25-apache-bullseye
+          - version: 8.1-bullseye
             docker-context: 8.1/debian/apache/default
             docker-tags: |
               nicoherbigde/symfony-php:8.1-apache
+              nicoherbigde/symfony-php:8.1-apache-bullseye
               nicoherbigde/symfony-php:8.1.12-apache
+              nicoherbigde/symfony-php:8.1.12-apache-bullseye
 
     steps:
       - name: Checkout Git Repository
