@@ -5,15 +5,31 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     # Disable all pull requests for GitHub Actions dependencies
     open-pull-requests-limit: 0
 
   # Maintain dependencies for Docker
   - package-ecosystem: "docker"
-    directory: "/"
+    directory: "/7.4/debian/apache/default"
     schedule:
       interval: "daily"
-    # Disable all pull requests for Docker dependencies
-    open-pull-requests-limit: 0
+    ignore:
+      - dependency-name: "php"
+        update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
 
+  - package-ecosystem: "docker"
+    directory: "/8.0/debian/apache/default"
+    schedule:
+      interval: "daily"
+    ignore:
+      - dependency-name: "php"
+        update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
+
+  - package-ecosystem: "docker"
+    directory: "/8.1/debian/apache/default"
+    schedule:
+      interval: "daily"
+    ignore:
+      - dependency-name: "php"
+        update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
