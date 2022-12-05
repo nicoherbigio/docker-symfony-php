@@ -6,7 +6,7 @@
 
  * [`8.1-apache`, `8.1-apache-bullseye`, `8.1.12-apache`, `8.1.12-apache-bullseye`](https://github.com/nicoherbigio/docker-symfony-php/blob/main/8.1/debian/apache/default/Dockerfile)
  * [`8.0-apache`, `8.0-apache-bullseye`, `8.0.25-apache`, `8.0.25-apache-bullseye`](https://github.com/nicoherbigio/docker-symfony-php/blob/main/8.0/debian/apache/default/Dockerfile)
- * [`7.4-apache`, `7.4-apache-bullseye`, `7.4.32-apache`, `7.4.32-apache-bullseye`](https://github.com/nicoherbigio/docker-symfony-php/blob/main/7.4/debian/apache/default/Dockerfile)
+ * [`7.4-apache`, `7.4-apache-bullseye`, `7.4.33-apache`, `7.4.33-apache-bullseye`](https://github.com/nicoherbigio/docker-symfony-php/blob/main/7.4/debian/apache/default/Dockerfile)
 
 ## How to get this image
 
