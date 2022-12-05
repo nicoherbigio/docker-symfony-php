@@ -34,8 +34,8 @@ jobs:
             docker-tags: |
               nicoherbigde/symfony-php:8.0-apache
               nicoherbigde/symfony-php:8.0-apache-bullseye
-              nicoherbigde/symfony-php:8.0.25-apache
-              nicoherbigde/symfony-php:8.0.25-apache-bullseye
+              nicoherbigde/symfony-php:8.0.26-apache
+              nicoherbigde/symfony-php:8.0.26-apache-bullseye
           - version: 8.1-bullseye
             docker-context: 8.1/debian/apache/default
             docker-tags: |
