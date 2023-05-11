@@ -11,14 +11,6 @@ updates:
 
   # Maintain dependencies for Docker
   - package-ecosystem: "docker"
-    directory: "/7.4/debian/apache/default"
-    schedule:
-      interval: "daily"
-    ignore:
-      - dependency-name: "php"
-        update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
-
-  - package-ecosystem: "docker"
     directory: "/8.0/debian/apache/default"
     schedule:
       interval: "daily"

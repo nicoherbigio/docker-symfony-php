@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - '.github/**'
-      - '7.4/**'
       - '8.0/**'
       - '8.1/**'
   schedule:
@@ -20,15 +19,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        version: [7.4-bullseye, 8.0-bullseye, 8.1-bullseye]
+        version: [8.0-bullseye, 8.1-bullseye]
         include:
-          - version: 7.4-bullseye
-            docker-context: 7.4/debian/apache/default
-            docker-tags: |
-              nicoherbigde/symfony-php:7.4-apache
-              nicoherbigde/symfony-php:7.4-apache-bullseye
-              nicoherbigde/symfony-php:7.4.33-apache
-              nicoherbigde/symfony-php:7.4.33-apache-bullseye
           - version: 8.0-bullseye
             docker-context: 8.0/debian/apache/default
             docker-tags: |
