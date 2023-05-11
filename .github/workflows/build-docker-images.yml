@@ -8,6 +8,7 @@ on:
       - '.github/**'
       - '8.0/**'
       - '8.1/**'
+      - '8.2/**'
   schedule:
     - cron: '0 1 * * *'
   workflow_dispatch:
@@ -19,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        version: [8.0-bullseye, 8.1-bullseye]
+        version: [8.0-bullseye, 8.1-bullseye, 8.2-bullseye]
         include:
           - version: 8.0-bullseye
             docker-context: 8.0/debian/apache/default
@@ -35,6 +36,13 @@ jobs:
               nicoherbigde/symfony-php:8.1-apache-bullseye
               nicoherbigde/symfony-php:8.1.18-apache
               nicoherbigde/symfony-php:8.1.18-apache-bullseye
+          - version: 8.2-bullseye
+            docker-context: 8.2/debian/apache/default
+            docker-tags: |
+              nicoherbigde/symfony-php:8.2-apache
+              nicoherbigde/symfony-php:8.2-apache-bullseye
+              nicoherbigde/symfony-php:8.2.0-apache
+              nicoherbigde/symfony-php:8.2.0-apache-bullseye
 
     steps:
       - name: Checkout Git Repository
