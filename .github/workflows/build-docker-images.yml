@@ -41,8 +41,8 @@ jobs:
             docker-tags: |
               nicoherbigde/symfony-php:8.3-apache
               nicoherbigde/symfony-php:8.3-apache-bullseye
-              nicoherbigde/symfony-php:8.3.9-apache
-              nicoherbigde/symfony-php:8.3.9-apache-bullseye
+              nicoherbigde/symfony-php:8.3.10-apache
+              nicoherbigde/symfony-php:8.3.10-apache-bullseye
 
     steps:
       - name: Checkout Git Repository
