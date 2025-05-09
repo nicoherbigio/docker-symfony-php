@@ -1,4 +1,4 @@
-FROM php:8.4.5-apache-bullseye
+FROM php:8.4.7-apache-bullseye
 
 LABEL maintainer="Nico Herbig <nico@nicoherbig.io>"
 
