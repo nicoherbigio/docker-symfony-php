@@ -78,6 +78,7 @@ RUN set -ex \
         echo 'memory_limit = 512M'; \
         echo 'post_max_size = 256M'; \
         echo 'upload_max_filesize = 256M'; \
+        echo 'variables_order = EGPCS'; \
        } | tee /usr/local/etc/php/conf.d/docker-symfony.ini
 
 
