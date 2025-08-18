@@ -46,7 +46,7 @@ RUN set -ex \
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en
 
 
-# Install additional required software packages for TYPO3 CMS.
+# Install additional required software packages for Symfony.
 
 RUN set -ex \
     && apt-get update \
