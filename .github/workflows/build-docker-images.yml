@@ -21,36 +21,36 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        version: [8.1-bullseye, 8.2-bullseye, 8.3-bullseye, 8.4-bullseye]
+        version: [8.1-trixie, 8.2-trixie, 8.3-trixie, 8.4-trixie]
         include:
-          - version: 8.1-bullseye
+          - version: 8.1-trixie
             docker-context: 8.1/debian/apache/default
             docker-tags: |
               nicoherbigde/symfony-php:8.1-apache
-              nicoherbigde/symfony-php:8.1-apache-bullseye
+              nicoherbigde/symfony-php:8.1-apache-trixie
               nicoherbigde/symfony-php:8.1.33-apache
-              nicoherbigde/symfony-php:8.1.33-apache-bullseye
-          - version: 8.2-bullseye
+              nicoherbigde/symfony-php:8.1.33-apache-trixie
+          - version: 8.2-trixie
             docker-context: 8.2/debian/apache/default
             docker-tags: |
               nicoherbigde/symfony-php:8.2-apache
-              nicoherbigde/symfony-php:8.2-apache-bullseye
+              nicoherbigde/symfony-php:8.2-apache-trixie
               nicoherbigde/symfony-php:8.2.29-apache
-              nicoherbigde/symfony-php:8.2.29-apache-bullseye
-          - version: 8.3-bullseye
+              nicoherbigde/symfony-php:8.2.29-apache-trixie
+          - version: 8.3-trixie
             docker-context: 8.3/debian/apache/default
             docker-tags: |
               nicoherbigde/symfony-php:8.3-apache
-              nicoherbigde/symfony-php:8.3-apache-bullseye
+              nicoherbigde/symfony-php:8.3-apache-trixie
               nicoherbigde/symfony-php:8.3.24-apache
-              nicoherbigde/symfony-php:8.3.24-apache-bullseye
-          - version: 8.4-bullseye
+              nicoherbigde/symfony-php:8.3.24-apache-trixie
+          - version: 8.4-trixie
             docker-context: 8.4/debian/apache/default
             docker-tags: |
               nicoherbigde/symfony-php:8.4-apache
-              nicoherbigde/symfony-php:8.4-apache-bullseye
+              nicoherbigde/symfony-php:8.4-apache-trixie
               nicoherbigde/symfony-php:8.4.11-apache
-              nicoherbigde/symfony-php:8.4.11-apache-bullseye
+              nicoherbigde/symfony-php:8.4.11-apache-trixie
 
     steps:
       - name: Checkout Git Repository
