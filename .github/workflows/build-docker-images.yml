@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/**'
+      - '.github/workflows/**'
       - '8.2/**'
       - '8.3/**'
       - '8.4/**'
