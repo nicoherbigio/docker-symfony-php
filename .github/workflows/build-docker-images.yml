@@ -9,6 +9,7 @@ on:
       - '8.2/**'
       - '8.3/**'
       - '8.4/**'
+      - '8.5/**'
   schedule:
     - cron: '0 1 * * 6'
   workflow_dispatch:
@@ -20,7 +21,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        version: [8.2-trixie, 8.3-trixie, 8.4-trixie]
+        version: [8.2-trixie, 8.3-trixie, 8.4-trixie, 8.5-trixie]
         include:
           - version: 8.2-trixie
             docker-context: 8.2/debian/apache/default
@@ -43,6 +44,13 @@ jobs:
               nicoherbigde/symfony-php:8.4-apache-trixie
               nicoherbigde/symfony-php:8.4.16-apache
               nicoherbigde/symfony-php:8.4.16-apache-trixie
+          - version: 8.5-trixie
+            docker-context: 8.5/debian/apache/default
+            docker-tags: |
+              nicoherbigde/symfony-php:8.5-apache
+              nicoherbigde/symfony-php:8.5-apache-trixie
+              nicoherbigde/symfony-php:8.5.0-apache
+              nicoherbigde/symfony-php:8.5.0-apache-trixie
 
     steps:
       - name: Checkout Git Repository
