@@ -6,7 +6,7 @@
 
  * [`8.4-apache`, `8.4-apache-trixie`, `8.4.15-apache`, `8.4.15-apache-trixie`](https://github.com/nicoherbigio/docker-symfony-php/blob/main/8.4/debian/apache/default/Dockerfile)
  * [`8.3-apache`, `8.3-apache-trixie`, `8.3.28-apache`, `8.3.28-apache-trixie`](https://github.com/nicoherbigio/docker-symfony-php/blob/main/8.3/debian/apache/default/Dockerfile)
- * [`8.2-apache`, `8.2-apache-trixie`, `8.2.29-apache`, `8.2.29-apache-trixie`](https://github.com/nicoherbigio/docker-symfony-php/blob/main/8.2/debian/apache/default/Dockerfile)
+ * [`8.2-apache`, `8.2-apache-trixie`, `8.2.30-apache`, `8.2.30-apache-trixie`](https://github.com/nicoherbigio/docker-symfony-php/blob/main/8.2/debian/apache/default/Dockerfile)
 
 ## How to get this image
 
