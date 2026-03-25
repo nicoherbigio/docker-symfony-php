@@ -42,8 +42,8 @@ jobs:
             docker-tags: |
               nicoherbigde/symfony-php:8.4-apache
               nicoherbigde/symfony-php:8.4-apache-trixie
-              nicoherbigde/symfony-php:8.4.18-apache
-              nicoherbigde/symfony-php:8.4.18-apache-trixie
+              nicoherbigde/symfony-php:8.4.19-apache
+              nicoherbigde/symfony-php:8.4.19-apache-trixie
           - version: 8.5-trixie
             docker-context: 8.5/debian/apache/default
             docker-tags: |
