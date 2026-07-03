@@ -1,4 +1,4 @@
-FROM php:8.4.22-apache-trixie
+FROM php:8.4.23-apache-trixie
 
 LABEL maintainer="Nico Herbig <nico@nicoherbig.io>"
 
