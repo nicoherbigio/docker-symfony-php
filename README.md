@@ -5,7 +5,7 @@
 ## Supported tags and respective `Dockerfile` links
 
  * [`8.5-apache`, `8.5-apache-trixie`, `8.5.10-apache`, `8.5.10-apache-trixie`](https://github.com/nicoherbigio/docker-symfony-php/blob/main/8.5/debian/apache/default/Dockerfile)
- * [`8.4-apache`, `8.4-apache-trixie`, `8.4.25-apache`, `8.4.25-apache-trixie`](https://github.com/nicoherbigio/docker-symfony-php/blob/main/8.4/debian/apache/default/Dockerfile)
+ * [`8.4-apache`, `8.4-apache-trixie`, `8.4.26-apache`, `8.4.26-apache-trixie`](https://github.com/nicoherbigio/docker-symfony-php/blob/main/8.4/debian/apache/default/Dockerfile)
  * [`8.3-apache`, `8.3-apache-trixie`, `8.3.35-apache`, `8.3.35-apache-trixie`](https://github.com/nicoherbigio/docker-symfony-php/blob/main/8.3/debian/apache/default/Dockerfile)
  * [`8.2-apache`, `8.2-apache-trixie`, `8.2.34-apache`, `8.2.34-apache-trixie`](https://github.com/nicoherbigio/docker-symfony-php/blob/main/8.2/debian/apache/default/Dockerfile)
 
